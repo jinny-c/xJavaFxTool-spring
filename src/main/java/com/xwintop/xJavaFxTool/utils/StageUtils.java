@@ -57,7 +57,8 @@ public class StageUtils {
             Method getNativeHandle = platformWindow.getClass().getMethod("getNativeHandle");
             getNativeHandle.setAccessible(true);
             Object nativeHandle = getNativeHandle.invoke(platformWindow);
-            return new Pointer((Long) nativeHandle);
+            return Pointer.createConstant((Long) nativeHandle);
+            //return new Pointer((Long) nativeHandle);
         } catch (Throwable e) {
             e.printStackTrace();
             return null;

@@ -3,6 +3,9 @@ package com.xwintop.xJavaFxTool.plugin;
 import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson.JSON;
 import com.xwintop.xJavaFxTool.model.PluginJarInfo;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -16,8 +19,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
 
 @Slf4j
 public class PluginManager {

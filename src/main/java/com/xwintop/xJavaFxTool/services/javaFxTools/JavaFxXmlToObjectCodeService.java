@@ -1,10 +1,8 @@
 package com.xwintop.xJavaFxTool.services.javaFxTools;
 
 import com.xwintop.xcore.util.StrUtil;
-
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.*;
-import org.dom4j.tree.DefaultAttribute;
 
 import java.util.List;
 
@@ -28,7 +26,8 @@ public class JavaFxXmlToObjectCodeService {
 
 		String[] packageStringSplit = packageString[1].split("\\.");
 		String classNameString = packageStringSplit[packageStringSplit.length-1].split("Controller")[0];
-		String classNameStringLoCase = StrUtil.fristToLoCase(classNameString);
+		//String classNameStringLoCase = StrUtil.fristToLoCase(classNameString);
+		String classNameStringLoCase = StrUtil.firstToLoCase(classNameString);
 		String viewPackage = packageString[1].substring(0, packageString[1].lastIndexOf("."));
 
 		StringBuilder controllerClassStrBuilder = new StringBuilder();//控制层类字符串
